@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="HeaderCSS/head.css" />
 
 <script type="text/javascript" src="HeaderJS/jquery-1.8.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="HeaderJS/respond.src.js"></script>
 <script type="text/javascript" src="HeaderJS/jquery.js"></script>
 <script type="text/javascript" src="HeaderJS/head.js"></script>
