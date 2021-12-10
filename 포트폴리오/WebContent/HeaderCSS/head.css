@@ -1,0 +1,567 @@
+@charset "utf-8";
+
+/* 전체 헤드영역 */
+		header {width: 100%; height: 130px; border-bottom: 1px solid lightgray;}
+		
+	/* 헤드영역 */
+		.header {width: 1100px; height: 130px; z-index:90;
+				position:relative; float:left; left: 50%; transform:translateX(-50%);}
+		
+		/* 헤드영역 로고이미지 */
+		.headLogoImg {margin:30px auto; float: left;}
+		
+		
+	/* 헤드영역 메뉴리스트 */
+		.mainMenuList {position:relative; float:left; margin: 55px 0 0 190px;}
+		.mainMenuList a {color: #444; }
+		.mainMenuList li {display: inline; font-size: 30px; padding: 0 5px;}
+		
+		/* 메뉴리스트의 이미지 아이콘 */
+		.mainMenuList img {width: 30px; height: 28px; padding: 0 5px;}
+		
+		/* 메뉴리스트 호버 효과 */
+		.mainMenuList li a {position: relative;}
+		
+		/* 밑줄 생성 / 제거 효과 */
+		.mainMenuList li a:hover:before{
+			width: 100%; background: #0bff;
+			border-radius: 0 0 3px 3px;
+			transition: width .2s linear;}
+		.mainMenuList li a:before {
+			content: ''; position: absolute;
+			bottom: 0px; left: 0; width: 0; height: 2px;
+			border-radius: 0 0 3px 3px;
+			background: #0bff; 
+			transition: width .2s linear;}
+			
+		/* 풀업 효과 */
+		/* .mainMenuList li a:after{
+			content: ''; position: absolute;
+		    width: 100%; height: 0px;
+		    left: 0px; bottom: 0px;
+		    background: #0bff;  color:white;
+		    opacity: 0.3;
+		    border-radius: 3px;
+		    box-shadow: 2px 2px 4px #0bff;
+		    transition: all .3s linear .2s;}
+		.mainMenuList li a:hover:after{height: 100%;} */
+		
+		/* 메뉴 텍스트 호버 효과 */
+		/* .mainMenuList li a:hover{
+			transition: all .2s linear .6s; 
+			border-radius: 3px;
+			color: white; background: #0bff;} */
+		
+		/* 메뉴 아이콘 호버 효과 */	
+		.travelIcon img:nth-child(2){
+			position: absolute; 
+			top: 5px; left: 0; 
+			opacity: 0; transition: opacity .2s linear;}
+		.travelIcon:hover img:first-child{
+			opacity: 0; transition: opacity .2s linear;}
+		.travelIcon:hover img:nth-child(2) {opacity: 1;}
+		
+		.hotelIcon img:nth-child(2){
+			position: absolute; 
+			top: 5px; left: 0; 
+			opacity: 0; transition: opacity .2s linear;}
+		.hotelIcon:hover img:first-child{
+		opacity: 0; transition: opacity .2s linear;}
+		.hotelIcon:hover img:nth-child(2) {opacity: 1;}
+		
+		.restaurantIcon img:nth-child(2){
+			position: absolute; 
+			top: 5px; left: 0; 
+			opacity: 0; transition: opacity .2s linear;}
+		.restaurantIcon:hover img:first-child{
+			opacity: 0; transition: opacity .2s linear;}
+		.restaurantIcon:hover img:nth-child(2) {opacity: 1;}
+		
+		/* 카테고리의 리스트 드롭다운 효과 */
+		.dropDown_list { display: none; position: absolute; left: 40px; top: 28px;}
+		#list1 {left: 20px;}
+		#list2 {left: 165px;}
+		#list3 {left: 285px;}
+		.dropDown_list a {  
+			position: relative; display: inline-block;
+			font-size: 15px; color: #555;}
+	
+		.dropDown:hover .dropDown_list {display: inline-block;}
+		
+		
+	/* 해드의 테이블 */
+		.mainMenu table {
+			float:right; width: 200px; height: 130px;
+			text-align: center; margin-right: 5px;}
+		.mainMenu table tr td {width: 33px; height: 58px;}
+		.mainMenu table .snsImg img {width: 25px; height: 25px;}
+		.mainMenu table .myPage img {width: 62px; height: 60px; 
+			position: relative; left: -18px; top: -30px;}
+		
+		/* 메뉴버튼 */
+		.headMenu {
+			display: block; position: relative;
+			width: 30px; height: 30px; cursor: pointer;}
+		.headMenu .headMenuLine {
+			display: block; cursor: pointer;
+			width: 30px; height: 4px; 
+			border-radius: 30px; background: #555;
+			margin: 8px auto;
+			/* -webkit-transition: all 0.3s ease-in-out;
+  			-o-transition: all 0.3s ease-in-out; */
+  			transition: all 0.3s ease-in-out;}
+		.headMenu.is-active .headMenuLine:nth-child(1) {width: 10px;}
+		.headMenu.is-active .headMenuLine:nth-child(2) {width: 25px;}
+		.headMenu.is-active .headMenuLine:nth-child(3) {width: 18px;}
+		.headMenu.is-active .headMenuLine{transform: rotate(-30deg);}
+		
+		
+		
+	/* 로그인창 전체 영역 */
+		.login_sideBar{
+			position:fixed; 
+			top:0; right: -500px;
+			width: 500px; height: 100%;
+			/* background: #00c3ff; */
+			background-image: url("../images/cloud.gif");
+			background-size: cover;
+			transition: all .35s; z-index: 99;
+			
+			}
+		.background{
+			position: fixed; 
+			top: 0; left: 0;
+			width: 100%; height: 100%;
+			background: rgba(0, 0, 0, 0.8);
+			transition: all .35s;
+			opacity: 0; visibility: hidden;
+			z-index: 98;}
+		
+		/* 로그인창 배경 */
+		.login{
+			position: absolute; 
+			left:50%; top: 50%;
+			width: 350px; height: 500px;
+			background: #fff; 
+			transform:translate(-50%, -50%);}
+		
+		/* 로고 */
+		.login img{
+			position: absolute; 
+			left: 50%; top: 30%;
+			transform:translate(-50%, -70%);}
+		
+		/* 닫기버튼 */
+		#sidebar {display: none;}
+		#sidebar + label {
+			position: relative; display: block; float:right; 
+			top: 15px; right: 15px;
+			width: 30px; height: 30px; 
+			cursor: pointer;}
+		#sidebar + label span {
+			position: absolute; display: block; 
+			width: 100%; height: 5px; 
+			border-radius: 30px; background: black;}
+		#sidebar + label span:nth-child(1) {top:50%; transform:translateY(-50%) rotate(45deg);}
+		#sidebar + label span:nth-child(2)	{top:50%; transform:translateY(-50%) rotate(-45deg);}
+		
+		/* 로그인 폼 */
+		.login form {
+			position: absolute; left: 50%; top: 40%;
+			transform:translate(-49%, 10%);}
+		
+		/* .login input[type=text], input[type=password]{
+			width: 200px; height: 30px;
+			margin-bottom: 15px; padding-left: 5px} */
+		#loginId{
+			width: 200px; height: 30px;
+			margin-bottom: 15px; padding-left: 5px}
+		#loginPw{
+			width: 190px; height: 30px;
+			margin-bottom: 15px; padding-left: 5px}
+			
+		.login input[type=checkbox] {margin: 0 5px;}
+		
+		.login input[type=submit] {
+			position:relative; float: right; top: -20px;
+			color: #fff; background: #0bff; 
+			width: 60px; margin-right: 5px;}
+		
+		/* 아이디 / 비밀번호 찾기 효과 */
+		#popup {display: none;} /* 체크 박스를 안보이게 */
+		.login-help{
+			position: absolute; 
+			left: 40%; top: 70%;
+			width: 180px; height: 22px;
+			transform:translate(-30%, 20%);
+			padding: 2px; text-align: center;}
+		.login-help label {cursor: pointer;}
+		
+		/* 가상의 line 생성 */
+		.login-help a::before {		/* top line 설정 */
+			content: '';
+			position: absolute;
+			top: 0; left: 0;
+			width: 0%; height: 2px;}
+			
+		.login-help a::after {		/* right line 설정 */
+			content: '';
+			position: absolute;
+			top: 0; right: 0;
+			width: 2px; height: 0%;}
+			
+		.login-help a>span::before {	/* bottom line 설정 */
+			content: '';
+			position: absolute;
+			bottom: 0; right: 0;
+			width: 0%; height: 2px;}
+			
+		.login-help a>span::after {	/* left line 설정 */
+			content: '';
+			position: absolute;
+			bottom: 0; left: 0;
+			width: 2px; height: 0%;}
+		
+		/* line 보여주기 / 사라지기 설정 */
+		.login-help a:hover::before{	/* top line */
+			width: 100%; background: #0bff;
+			transition: width .2s linear;}
+		.login-help a::before{
+			background: #0bff;
+			transition: width .2s linear .6s;}
+			
+		.login-help a:hover::after{		/* right line */
+			height: 100%; background: #0bff;
+			transition: height .2s linear .2s;}
+		.login-help a::after{
+			background: #0bff;
+			transition: height .2s linear .4s;}
+		
+		.login-help a:hover>span::before{		/* bottom line */
+			width: 100%; background: #0bff;
+			transition: width .2s linear .4s;}
+		.login-help a>span::before{
+			background: #0bff;
+			transition: width .2s linear .2s;}
+		
+		.login-help a:hover>span::after{	/* left line */
+			height: 100%; background: #0bff;
+			transition: height .2s linear .6s;}
+		.login-help a>span::after{
+			background: #0bff;
+			transition: height .2s linear;}
+		
+		/* box-shadow / 글자색 변경 */
+		.login-help:hover{
+			transition: all 0.4s linear 1s; 
+			background: #0bff; color: white;
+			box-shadow: 2px 2px 4px #0bff;}
+		
+		
+		/* 아이디 / 비밀번호 찾기 창 영역 */
+		.Login_Help_Page {
+			position: fixed; left: 50%; top: 50%;
+			width: 405px; height: 600px;
+			text-align:center;
+			transform:translate(-50%, -50%);
+			padding: 60px 60px 60px;
+			z-index: 100; background: #fff;}
+	
+		/* 메인페이지 링크 로고 */
+		.Login_Help_Page img {width: 200px; height: 100px;}
+		
+		/* 아이디 비밀번호 탭 메뉴 */
+		.tab_title { 
+			display: flex; padding: 0; margin: 0; height: 60px;
+			list-style: none; cursor: pointer;
+			border-bottom: 1px solid #0bff;}
+		.tab_title li  {
+			display:block; height: 59px; flex: 1;
+			border:1px solid #ddd; border-left: none; border-bottom: none; 
+			font-size: 20px; color: #505050; text-align: center; line-height: 59px;}
+		.tab_title li:first-child  {border-left: 1px solid #ddd;}
+		.tab_title li.on {
+			position: relative; height: 58px;
+			border-color: #0bff; border-top-width: 2px; 
+			border-bottom: 1px solid #fff; line-height: 57px;}
+		.tab_title li.on:before {
+			content: ""; position: absolute;
+			left: -1px; top: -2px; width: 1px; height: 100%;
+			background: #0bff; border-top: 2px solid #0bff;}
+		
+		/* 아이디 비밀번호 찾기 텍스트 영역*/
+		.tab_cont {padding: 30px 0; border-bottom: 1px solid #444; height: 350px;}
+		.tab_cont p {padding: 0 0 30px; border-bottom: 3px solid #444;}
+		
+		/* 아이디 이름 이메일 영역 테이블 */
+		.tab_cont table {margin: 30px auto; width: 250px; height: 100px; }
+		/* 텍스트창 영역 */
+		.tab_cont input[type=text] {width: 284px; height: 35px; padding: 0 10px;
+									box-shadow: 0 14px 30px rgba(0,0,0,0.15); border: none;}
+		/* 찾기 버튼 */
+		.tab_cont table .btn {width: 308px; height: 35px; background: #0bff; color: #fff; border: none;
+								cursor: pointer; box-shadow: 0 14px 30px rgba(0,0,0,0.15);}
+		.tab_cont th {padding: 0 0 20px;}
+		
+		.tab_cont div {display: none;}
+		.tab_cont div.on {display: block;}
+		
+		
+		
+		/* 회원가입 효과 */
+		.join_membership{ 
+			position: absolute; left: 50%; top: 80%;
+			width: 70px; height: 23px; text-align: center;
+			transform:translate(-50%, -40%);
+		}
+		#join_member {display: none;} /* 회원가입 체크박스 안보이게 */
+		.join_membership a {color: black;}
+		
+		.join_membership a::before {		/* topline 설정 */
+			content: '';
+			position: absolute;
+			top: 0; left: 0;
+			width: 0%; height: 2px;}
+			
+		.join_membership a::after {		/* rightline 설정 */
+			content: '';
+			position: absolute;
+			bottom:0; right: 0;
+			width: 2px; height: 0%;}
+			
+		.join_membership a>span::before {	/* bottomline 설정 */
+			content: '';
+			position: absolute;
+			bottom: 0; right: 0;
+			width: 0; height: 2px;}
+			
+		.join_membership a>span::after {	/* leftline 설정 */
+			content: '';
+			position: absolute;
+			top: 0; left: 0;
+			width: 2px; height: 0;}
+			
+		.join_membership a:hover::before{		/* top line */
+			width: 15%; background: #0bff;
+			transition: width .2s linear;}
+		.join_membership a::before{
+			background: #0bff; transition: width .2s linear;}
+			
+		.join_membership a:hover>span::before{		/* bottom line */
+			width: 15%; background: #0bff;
+			transition: width .2s linear;}
+		.join_membership a>span::before{
+			background: #0bff; transition: width .2s linear;}
+		
+		.join_membership a:hover::after{		/* right line */
+			height: 40%; background: #0bff;
+			transition: height .2s linear;}
+		.join_membership a::after{
+			background: #0bff; transition: height .2s linear;} 
+		
+		.join_membership a:hover>span::after{	/* left line */
+			height: 40%; background: #0bff;
+			transition: height .2s linear;}
+		.join_membership a>span::after{
+			background: #0bff; transition: height .2s linear;}
+		
+		/* 회원가입 창 전체 영역 */
+		.joinPage {
+			position: fixed; z-index:100;
+			left: 50%; top: 50%;
+			width: 400px; height: 700px;
+			text-align: center;
+			padding: 50px 50px 50px;
+			background: #fff;
+			transform: translate(-50%, -50%);}
+		
+		/* 회원가입 창 닫기 버튼 */
+		#joinPageClose { display: none;}
+		#joinPageClose + label {
+			position: relative; display: block; float:right; 
+			top: 0px; right: 0px;
+			width: 30px; height: 30px; 
+			cursor: pointer;}
+		#joinPageClose + label span {
+			position: absolute; display: block; 
+			width: 100%; height: 5px; 
+			border-radius: 30px; background: black;}
+		#joinPageClose + label span:nth-child(1) {top:50%; transform:translateY(-50%) rotate(45deg);}
+		#joinPageClose + label span:nth-child(2) {top:50%; transform:translateY(-50%) rotate(-45deg);}
+		
+		/* 회원가입 창 링크 로고 */
+		.joinPage img { width: 200px; height: 100px; margin-bottom: 20px;}
+		
+		/* 회원가입 창의 텍스트 영역 */
+		.joinPage input[type=text], input[type=password] { 
+			width: 280px; height: 35px; 
+			padding: 0 10px; margin-bottom:20px;}
+									
+		/* 아이디 텍스트  */
+		#joinId { width: 200px;}
+		/* 아이디 중복확인 버튼 */
+		#joinId_check {
+			width: 75px; height:37px; margin: 0 2px;
+			background: #0bff; color: #fff; border-radius: 3px;}
+		
+		/* 생년월일 */
+		#joinYear {width: 80px;}
+		#joinMonth {width: 85px; height: 39px;}
+		#joinDay {width: 80px;}
+		
+		/* 성별 라디오 타입 */
+		.joinGender_box {position: relative; left: -80px; margin-bottom: 20px;}
+		.joinGender_box label {margin-right: 10px;}
+		.joinGender_box input {margin-right: 5px; display: none;}
+		.joinGender_box input + label:before {
+			content: ''; display: inline-block; width: 13px; height: 13px;
+			border: 1px solid #ddd; margin: 0 10px 0 0; background: #f4f4f4;
+			vertical-align: middle; box-sizing: border-box; transition: all 0.3s;}
+		.joinGender_box input:checked + label:before { border: 5px solid #666;}
+		
+		/* 전화번호 입력 */
+		#joinPhone { width: 168px; margin-right: 5px;}
+		#joinPhone_codeGet { 
+			width: 100px; height: 37px; background: #0bff; color: #fff; border-radius: 3px;}
+		
+		/* 가입하기 버튼 */
+		#joinBtn { width: 305px; height: 37px; background: #0bff; color: #fff; border-radius: 3px;}
+		
+			
+			
+		/* 로그인창 사이드바 열림 / 닫힘 효과 */
+		input#sidebar {display: none;}
+		input#sidebar:checked ~ .login_sideBar{right: 0;}
+		input#sidebar:checked ~ .background {opacity: 1; visibility: visible;}
+		
+		/* 닫기 버튼 */
+		#loginClose {display: none;}
+		#loginClose + label {
+			position: relative; display: block; float:right; 
+			top: 0px; right: 0px;
+			width: 30px; height: 30px; 
+			cursor: pointer;}
+		#loginClose + label span {
+			position: absolute; display: block; 
+			width: 100%; height: 5px; 
+			border-radius: 30px; background: black;}
+		#loginClose + label span:nth-child(1) {top:50%; transform:translateY(-50%) rotate(45deg);}
+		#loginClose + label span:nth-child(2) {top:50%; transform:translateY(-50%) rotate(-45deg);}
+	
+		
+		
+	/* 전체메뉴  영역*/
+		#allMenu_box {
+			position:fixed; width: 900px; height: 750px; padding:15px 30px; 
+			left:50%; transform:translateX(-50%); border-radius:10px;
+			border:4px solid #00bfff; background: #fff; z-index: 5;}
+			
+		/* 검색 영역 */
+		.searchAera {
+			position: relative; width: 100%; height: 80px;}
+		.searchAera table {
+			width: 100%; height: 100%}
+		
+		/* 검색 아이콘 */
+		#searchIcon {width: 70%;}
+		.search {
+			position: relative; float:right;
+			display: inline-block;
+			width: 100px; height: 60px;}
+		#search {
+		 	position: absolute;
+			display: inline-block;
+			width:0; height: 53px;
+			font-size: 20px; font-weight: 10px;
+			top: 0; right: 0;
+			border: none; outline: none;
+			color: #555; background: none;
+			padding: 3px 60px 3px 15px;
+			z-index: 3; cursor: pointer;
+			transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);}
+		#search:focus:hover {border-bottom: 1px solid #BBB;}
+		#search:focus {
+			width: 500px;
+		  	z-index: 1; cursor: text;
+		  	border-bottom: 1px solid #BBB;}
+		#search_submit { background:yellow;
+		  	position: absolute; float: right;
+		  	display: inline-block;
+		  	height: 64px; width: 63px;
+		  	top: 0; right: 0;
+		  	border: none; cursor: pointer; 
+		  	z-index: 2; text-indent: -10000px;
+		  	background: url("../images/search.png") center center no-repeat;
+		  	opacity: 0.4; transition: opacity .4s ease;}
+		#search_submit:hover {opacity: 0.8;}
+		
+		/* 인기검색어 영역 */
+		.popular_search{width:180px; height:50px; overflow:hidden;}
+		.rank-list{position:relative; width:100%; font-size: 20px;}
+		.rank-list li{width:100%; line-height:50px; top:50%; transform:translateY(-50%);}
+		
+		/* 전체메뉴 닫기버튼 */
+		#allMenu_close {display: none;}
+		#allMenu_close + label {
+			position: relative; display: block; 
+			width: 30px; height: 30px; 
+			cursor: pointer;}
+		#allMenu_close + label span {
+			position: absolute; display: block; 
+			width: 100%; height: 5px; 
+			border-radius: 30px; background: black;}
+		#allMenu_close + label span:nth-child(1) {top:50%; transform:translateY(-50%) rotate(45deg);}
+		#allMenu_close + label span:nth-child(2) {top:50%; transform:translateY(-50%) rotate(-45deg);}
+		
+		/* 전체 메뉴 리스트 */
+		#allMenu_box ul { width:100%; margin-top: 20px;}
+		
+		
+		/* 전체메뉴 박스안에있는 ul요소들의 글꼴과 크기,위치,밑줄등을 설정한다. */
+		#allMenu_box ul li { float:left; width:140px; padding:0 40px;}
+		#allMenu_box ul li ul { width:100px;}
+		#allMenu_box ul li ul li { padding:8px 0; width:100%;}
+		#allMenu_box ul li ul li a { position: relative; font-size: 16px; font-weight: bold; color:#aaa;}
+		#allMenu_box ul li ul li a:hover {color: #555;}
+		
+		/* 전체메뉴 박스의 카테고리들의 밑줄 효과 */
+		#allMenu_nav {position: relative; font-size: 25px; font-weight: bold; color: #555;}
+		#allMenu_nav:before, 
+		#allMenu_nav:after {
+			position: absolute;
+		    content: ""; 
+		    width: 100%; height: 2px;
+		    left: 0px; opacity: 0;
+		    background: black;
+		    transition: all 0.3s;}
+		#allMenu_nav:before {top: 0px; transform: translateY(10px);}
+		#allMenu_nav:after {bottom: 0px; transform:translateY(-10px);}
+		#allMenu_nav:hover:before, 
+		#allMenu_nav:hover:after { opacity: 1; transform:translateY(0px);}
+		
+		/* 전체메뉴 박스안에 있는 리스트들의 밑줄 효과 */
+		.allMenu_list li ul li a:before {
+			content: ''; position: absolute;
+			bottom: -2px; left: 0; width: 0; height: 2px;
+			background: #aaa;
+			transition: width .2s linear .1s;}
+		.allMenu_list li ul li a:hover:before {
+			width: 100%; background: #aaa;
+			transition: width .2s linear;}
+		
+		
+		/* 전체 메뉴박스 안의 추천 컨텐츠 영역*/
+		.menuRecommend{ background:red;
+			position: absolute; margin-top: 290px;
+			width: 93.7%; height: 350px;
+			left:50%; transform:translateX(-50%);
+			font-size: 100px;}
+		
+		/* 전체메뉴 여행카테고리 리스트들의 컨텐츠 숨김 */
+		#allMenu_list {display: none;}
+		
+		/* 전체메뉴 여행카테고리 리스트들의 위치, 크기 설정 */
+		#allMenu_list { background: blue;
+			position:absolute; margin-top:290px; 
+			width: 93.7%; height: 350px;
+			font-size: 100px;}
