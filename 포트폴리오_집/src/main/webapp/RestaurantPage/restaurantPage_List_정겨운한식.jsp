@@ -23,7 +23,7 @@
 	.report {width: 100%; height: 450px; }
 	#report {width: 550px; height: 400px; float: left;}
 	#map { position:relative; float: right;}
-	#info { width: 400px; height: 250px;}
+	#info { width: 400px; height: 280px;}
 	a {color: black;}
 </style>
 
@@ -61,9 +61,9 @@
 				<div id="report">
 					<table id="info">
 						<tr><th colspan="2">매장 정보</th></tr>
-						<tr><th>주소</th><td><a href="http://kko.to/cOQL4u3fH" target="_blank">서울특별시 중구 한식1길 10 정겨운한식 1층</a></td></tr>
+						<tr><th>주소</th><td>서울특별시 중구 한식1길 10 정겨운한식 1층<br><a href="http://kko.to/cOQL4u3fH" target="_blank" style="color: gray">길찾기</a></td></tr>
 						<tr><th>전화</th><td>02-123-1234</td></tr>
-						<tr><th>영업시간</th><td>11:30 ~ 14:30, 17:00 ~ 22:00</td></tr>
+						<tr><th>영업시간</th><td>11:30 ~ 14:30<br> 17:00 ~ 22:00</td></tr>
 						<tr><th>휴무일</th><td>연중무휴</td></tr>
 						<tr><th>홈페이지</th><td><a href="https://www.shilla.net/seoul/dining/viewDining.do?contId=KRN#ad-image-0" target="_blank">https://www.shillahotels.com/</a></td></tr>
 						<tr><th>주차</th><td>가능</td></tr>

@@ -16,15 +16,7 @@
 		if(id != null){
 			MemberInfo member = data.getMember(id);
 			response.sendRedirect("../MainPage_loginAfter.jsp");
-			/* out.print(member.getCustomerNum()+"<br>");
-			out.print(member.getId()+"<br>");
-			out.print(member.getPw()+"<br>");
-			out.print(member.getName()+"<br>");
-			out.print(member.getYear()+"-"+member.getMonth()+"-"+member.getDay()+"<br>");
-			out.print(member.getGender()+"<br>");
-			out.print(member.getEmail()+"<br>");
-			out.print(member.getPhone()+"<br>");
-			out.print(member.getJoinDate()+"<br>"); */
+			
 		}
 	%>
 </body>

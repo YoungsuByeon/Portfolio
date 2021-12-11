@@ -33,7 +33,7 @@
 	.showCon_back {
 		position:relative; float:left; 
 		width:680px; height:800px;
-		top: 20px; left:30px; overflow: ;}
+		top: 20px; left:30px;}
 	.show_con{
 		float:left; background:#fff;
 		width: 680px; height: 800px; z-index: 2;}

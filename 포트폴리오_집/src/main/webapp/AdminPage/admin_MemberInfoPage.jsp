@@ -81,7 +81,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td colspan="10"><p align="right"><a href="admin_MemberInfoPage.jsp">[전체목록]</a>&nbsp;&nbsp;<a href="../MainPage.jsp">[메인페이지]</a></p></td>
+			<td colspan="10"><p align="right"><a href="admin_MemberInfoPage.jsp">[전체목록]</a>&nbsp;&nbsp;<a href="../MainPage.html">[메인페이지]</a></p></td>
 		</tr>
 	</table>
 	<br>

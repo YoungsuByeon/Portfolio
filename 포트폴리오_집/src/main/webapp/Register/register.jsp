@@ -20,15 +20,15 @@
 		if(! data.isMember(id, pw)){
 			if(data.insertMember(member) != 0){
 				out.print("<h3>회원가입에 성공하셨습니다</h3>");
-				out.print("<h3><a href='../MainPage.jsp'>로그인 화면으로 돌아가기</a></h3>");
+				out.print("<h3><a href='../MainPage.html'>로그인 화면으로 돌아가기</a></h3>");
 			}
 			else{
 				out.print("<h3>회원 가입에 실패하였습니다.</h3>");
-				out.print("<h3><a href='../MainPage.jsp'>로그인화면으로 돌아가기");
+				out.print("<h3><a href='../MainPage.html'>로그인화면으로 돌아가기");
 			}
 		}else{
 			out.print("<h3>이미 가입된 아이디 입니다. 다시 작성해 주세요</h3>");
-			out.print("<h3><a href='../MainPage.jsp'>회원가입으로 돌아가기<a></h3>");
+			out.print("<h3><a href='../MainPage.html'>회원가입으로 돌아가기<a></h3>");
 		}
 	%>
 </body>

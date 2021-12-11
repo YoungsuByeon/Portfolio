@@ -12,7 +12,7 @@
 		String id = (String)session.getAttribute("ID");
 		if(id != null){
 			session.invalidate();
-			response.sendRedirect("../MainPage.jsp");
+			response.sendRedirect("../MainPage.html");
 		}
 	%>
 </body>

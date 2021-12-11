@@ -28,7 +28,7 @@
 		<div class="restaurant num1">
 			<a href="restaurantPage_List_정겨운한식.jsp"><img alt="" src="../images/한식.jpg"></a>
 			<div id="restaurantName">
-				<a href="restaurantPage_List_정겨운한식.html">정겨운 한식</a>
+				<a href="restaurantPage_List_정겨운한식.jsp">정겨운 한식</a>
 				<p><img alt="" src="../images/위치아이콘.png"><span>서울 - 한식</span>
 			</div>
 		</div>
