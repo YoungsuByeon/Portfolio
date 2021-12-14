@@ -1,6 +1,4 @@
 # Portfolio
 여행 정보 소개 웹 사이트
 <hr>
-https://user-images.githubusercontent.com/94303832/146023529-031dd98c-010b-4672-83eb-b6c0b00b9470.mp4
-
-
+![MainPage](https://user-images.githubusercontent.com/94303832/146026656-6edf05c2-17b1-4f4f-8612-3cdc6a972129.gif)
